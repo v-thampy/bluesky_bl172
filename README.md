@@ -32,12 +32,12 @@ notebooks/    # Jupyter workflow templates
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourname/bluesky-gixrd-automation.git
-cd bluesky-gixrd-automation
+git clone https://github.com/yourname/bluesky_bl172.git
+cd bluesky_bl172
 
 # Set up environment
-conda create -n gixrd python=3.10 -c conda-forge
-conda activate gixrd
+conda create -n bluesky_env python=3.11 -c conda-forge
+conda activate bluesky_env
 pip install -r requirements.txt
 ```
 
