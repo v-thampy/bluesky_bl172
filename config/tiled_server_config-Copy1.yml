@@ -1,0 +1,41 @@
+authentication:
+  allow_anonymous_access: true
+
+trees:
+  # Native Tiled SQLite catalog (This section should still work fine)
+  - path: /
+    tree: catalog
+    args:
+      uri: "sqlite:////home/b_thampy/data/bluesky_data/catalog.db"
+      writable_storage: "/home/b_thampy/data/bluesky_data"
+      init_if_not_exists: true
+
+  # Bluesky-v1 catalog served through Intake
+#  - path: /bluesky
+#    tree: "tiled.catalog.adapter:IntakeAdapter" # <--- THIS IS THE CORRECTED PATH FOR YOUR TILED 0.1.0b29
+#    args:
+#      uri: "/home/b_thampy/bluesky_bl172/config/catalog.yml"
+
+# Alternative for your tiled_server_config.yml if you ONLY care about serving .msgpack files
+# without using your existing catalog.yml
+authentication:
+  allow_anonymous_access: true
+
+trees:
+  # Native Tiled SQLite catalog (keep if you want this still)
+  - path: /
+    tree: catalog
+    args:
+      uri: "sqlite:////home/b_thampy/data/bluesky_data/catalog.db"
+      writable_storage: "/home/b_thampy/data/bluesky_data"
+      init_if_not_exists: true
+
+  # Bluesky data directly from msgpack files using Tiled's native driver
+  - path: /bluesky_msgpack_native
+    tree:
+      # This should work as it's a native Tiled driver, not an adapter
+      # and it bypasses the need for the IntakeAdapter class
+      driver: bluesky-msgpack-catalog
+      args:
+        paths:
+          - "/home/b_thampy/data/bluesky_data/*.msgpack" # Assumes your msgpack files are here

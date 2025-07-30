@@ -1,0 +1,12 @@
+# /home/b_thampy/bluesky_bl172/config/catalog.yml
+sources:
+  my_catalog:
+    description: SQLite-based Bluesky v1 catalog
+    driver: bluesky-sqlite-normalized-catalog # CORRECTED DRIVER NAME
+    args:
+      metadatastore:
+        dbpath: /home/b_thampy/data/bluesky_data/metadata.db
+      asset_registry:
+        dbpath: /home/b_thampy/data/bluesky_data/assets.db
+    metadata:
+      beamline: BL172

@@ -1,0 +1,15 @@
+authentication:
+  single_user_api_key: 3175584d66321e4c3baf04d6b15a0cac5c6a6047
+  allow_anonymous_access: true
+  
+trees:
+  # Native Tiled SQLite catalog (This section seemed to work because 'catalog' is a string shortcut)
+  - path: /
+    tree: catalog
+    args:
+      uri: sqlite:////home/b_thampy/tiled/catalog.db
+      readable_storage: ["/data/eiger"]
+      writable_storage: 
+      - /home/b_thampy/data/bluesky_data  #  where arrays go when sent in over http
+      - sqlite:////home/b_thampy/data/tabular.db #  where dataframes go when sent in over http
+      init_if_not_exists: true

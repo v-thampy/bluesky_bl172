@@ -1,0 +1,16 @@
+my_bluesky_project/
+├── config/
+│   ├── detectors.py        # Eiger setup + ROIs
+│   ├── counters.py         # I0, I1, monitor, temp
+│   ├── motors.py           # All motors (sample_y, th, etc.)
+│   ├── runengine.py        # RunEngine + databroker + callbacks
+├── plans/
+│   ├── scan_functions.py   # Main scan with Eiger + counters
+│   ├── alignment.py        # High-level alignment helpers
+│   ├── alignment_modular.py# Low-level modular building blocks
+│   ├── wrapped_scan.py     # Run scan with counters always included
+├── utils/
+│   ├── logger.py           # Append metadata to CSV
+│   ├── plot_tools.py       # Post/live plots, multi-signal, interactive
+│   ├── eiger_roi_gui.py    # ROI configuration + live plotting
+├── startup.py              # Interactive IPython entry point
