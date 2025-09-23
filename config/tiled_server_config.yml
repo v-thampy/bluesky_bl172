@@ -1,3 +1,7 @@
+# To start the server with this config file, run:
+# tiled serve config ~/bluesky_bl172/config/tiled_server_config.yml --port 8000
+# See https://tiled.readthedocs.io/en/latest/server.html for more details
+
 authentication:
   single_user_api_key: 3175584d66321e4c3baf04d6b15a0cac5c6a6047
   allow_anonymous_access: true

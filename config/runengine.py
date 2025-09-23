@@ -11,7 +11,7 @@ def setup_runengine_with_databroker():
     bec = BestEffortCallback()
     RE.subscribe(bec)
     # Temporary 
-    return RE
+    # return RE
     try:
         from tiled.client import from_uri
         client = from_uri("http://localhost:8000", api_key="3175584d66321e4c3baf04d6b15a0cac5c6a6047")

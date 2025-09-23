@@ -135,7 +135,7 @@ def init_BL172_detectors(eiger_prefix='BL172:eiger4M:'):
     print(f"Eiger detector initialized successfully.")
     return eiger
 
-eiger = init_BL172_detectors()
+eiger = init_BL172_detectors(eiger_prefix='BL172:eiger1M:')
 
 #eiger = MyEiger(prefix="BL172:eiger4M:", name="eiger", labels={'detectors', 'area_detectors'})
 #eiger.stage()

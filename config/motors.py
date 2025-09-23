@@ -22,10 +22,11 @@ def init_motor(motor_prefix, motor_name, motor_type='mdrive', precision=4, toler
     return motor
 
 sx   = init_motor("BL172:MDrive:m1", "sx", labels={'motors', 'scan_motors'})
-th = init_motor('BL172:MDrive:m4', "th", labels={'motors', 'scan_motors'}, motor_type='stepper')
-sfpx = init_motor('BL172:SAX_MC2:MOTOR3', "sfpx", labels={'motors', 'scan_motors'}, motor_type='stepper')
+#th = init_motor('BL172:MDrive:m4', "th", labels={'motors', 'scan_motors'}, motor_type='stepper')
+#sfpx = init_motor('BL172:SAX_MC2:MOTOR3', "sfpx", labels={'motors', 'scan_motors'}, motor_type='stepper')
 
-motor_list = [sx, sfpx, th]
+#motor_list = [sx, sfpx, th]
+motor_list = [sx]
 
 def init_BL172_motor(motor_prefix='BL172:MDrive:m1'):
 
